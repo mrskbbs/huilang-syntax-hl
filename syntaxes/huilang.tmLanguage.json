@@ -1,0 +1,119 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HuiLang",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#data-types"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#function-name"
+		},
+		{
+			"include": "#function-keyword"
+		},
+		{
+			"include": "#function-begin"
+		},
+		{
+			"include": "#class"
+		},
+		{
+			"include": "#integer"
+		},
+		{
+			"include": "#float"
+		},
+		{
+			"include": "#built-in"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.huilang",
+				"match": "\\b(вилкойвглаз|иливжопураз|отвечайсука|бимбим|бам|пока|пускайпокругу|оформить|тама|спиздить|какрулить|мишавсехуйня|найтистукача|всенахуй|айблядьмаслинупоймал|нудавайнападай|шухер)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.huilang",
+			"begin": "(\"|')",
+			"end": "(\"|')",
+			"patterns": [
+				{
+					"name": "constant.character.escape.huilang",
+					"match": "\\\\."
+			}]
+		},
+		"data-types":{
+			"patterns": [{
+				"name": "support.type.huilang",
+				"match": "\\b(нумбер|плавник|стринги|малява|помойка|ксива|хуежество|букварь|азбука)\\b"
+			}]		
+		},
+		"constants":{
+			"patterns": [{
+					"name": "constant.language.huilang",
+					"match": "\\b(внатуре|пиздеж)\\b"
+			}]	
+		},
+		"function-keyword":{
+			"patterns": [{
+				"name": "storage.type.function.huilang",
+				"match": "\\b(дефине)\\b"
+			}]
+		},
+		"function-name":{
+			"patterns": [{
+				"name": "entity.name.function.huilang",
+				"match": "([дефине]\\s[a-zA-Zа-яА-Я][a-zA-Zа-яА-Я0-9_]*)"
+			}]
+		},
+		"function-begin":{
+			"patterns": [{
+				"name": "punctuation.section.function.begin.huilang",
+				"match": "бля"
+			}]
+		},
+		"class":{
+			"patterns": [{
+				"name": "storage.type.class.huilang",
+				"match": "\\b(клёво)\\b"
+			}]
+		},
+		"integer":{
+			"patterns": [{
+				"name": "constant.numeric.dec.huilang",
+				"match": "\\d"
+			}]
+		},
+		"float":{
+			"patterns": [{
+				"name": "constant.numeric.float.huilang",
+				"match": "\\b(\\d*[.]\\d*)\\b"
+			}]
+		},
+		"built-in":{
+			"patterns": [{
+				"name": "support.function.builtin.huilang",
+				"match": "\\b(зырить|спросить|засратьвсе)\\b"
+			}]
+		},
+		"logical":{
+			"patterns": [{
+				"name": "keyword.operator.logical.huilang",
+				"match": "\\b(однахуйня)\\b"
+			}]
+		}
+
+	},
+	"scopeName": "source.hui"
+}

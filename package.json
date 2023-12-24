@@ -1,0 +1,25 @@
+{
+  "name": "hui-lang",
+  "displayName": "HuiLang",
+  "description": "Syntax highlighting for your precious HuiLang!",
+  "version": "2.2.8",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "huilang",
+      "aliases": ["HuiLang", "huilang"],
+      "extensions": [".hui",".huilang",".hl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "huilang",
+      "scopeName": "source.hui",
+      "path": "./syntaxes/huilang.tmLanguage.json"
+    }]
+  }
+}
