@@ -3,6 +3,7 @@
   "displayName": "HuiLang",
   "description": "Syntax highlighting for your precious HuiLang!",
   "version": "2.2.8",
+  "publisher": "mrskbbs",
   "engines": {
     "vscode": "^1.85.0"
   },
