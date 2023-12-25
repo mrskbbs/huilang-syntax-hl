@@ -3,7 +3,16 @@
 	"name": "HuiLang",
 	"patterns": [
 		{
+			"include": "#punctuation"
+		},
+		{
 			"include": "#keywords"
+		},
+		{
+			"include": "#integer"
+		},
+		{
+			"include": "#float"
 		},
 		{
 			"include": "#strings"
@@ -13,6 +22,12 @@
 		},
 		{
 			"include": "#constants"
+		},
+		{
+			"include": "#built-in"
+		},
+		{
+			"include": "#function-variables"
 		},
 		{
 			"include": "#function-name"
@@ -25,18 +40,16 @@
 		},
 		{
 			"include": "#class"
-		},
-		{
-			"include": "#integer"
-		},
-		{
-			"include": "#float"
-		},
-		{
-			"include": "#built-in"
 		}
 	],
+	
 	"repository": {
+		"punctuation":{
+			"patterns": [{
+				"name": "punctuation.sectionfunction.begin",
+				"match": "(бля|,)"
+			}]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.huilang",
@@ -71,10 +84,23 @@
 				"match": "\\b(дефине)\\b"
 			}]
 		},
+		"function-variables":{
+			"patterns": [{
+				"match": "(?x)\n  ([[:alpha:]_]\\w*)\n    \\s* (?: (,) | (?=[)#\\n=]))\n",
+				"captures": {
+					"1": {
+						"name": "variable.parameter.function.language.huilang"
+					},
+					"2": {
+						"name": "punctuation.separator.parameters.huilang"
+					}
+				}
+			}]
+		},
 		"function-name":{
 			"patterns": [{
 				"name": "entity.name.function.huilang",
-				"match": "([дефине]\\s[a-zA-Zа-яА-Я][a-zA-Zа-яА-Я0-9_]*)"
+				"match": "[a-zA-Zа-яА-Я]*[\\da-zA-Zа-яА-Я_]*[() ]*[()]"
 			}]
 		},
 		"function-begin":{
