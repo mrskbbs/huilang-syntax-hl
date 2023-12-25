@@ -2,7 +2,7 @@
   "name": "hui-lang",
   "displayName": "HuiLang",
   "description": "Syntax highlighting for your precious HuiLang!",
-  "version": "2.2.8",
+  "version": "6.9.420",
   "publisher": "mrskbbs",
   "engines": {
     "vscode": "^1.85.0"

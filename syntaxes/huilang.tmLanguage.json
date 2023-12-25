@@ -6,6 +6,9 @@
 			"include": "#punctuation"
 		},
 		{
+			"include": "#variables"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -44,6 +47,12 @@
 	],
 	
 	"repository": {
+		"variables":{
+			"patterns": [{
+				"name": "variable.huilang",
+				"match": "[$][a-zA-Zа-яА-Я][a-zA-Zа-яА-Я0-9_]*"
+			}]
+		},
 		"punctuation":{
 			"patterns": [{
 				"name": "punctuation.sectionfunction.begin",
